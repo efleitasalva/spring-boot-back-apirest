@@ -150,7 +150,6 @@ public class ClienteRestController {
 			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.INTERNAL_SERVER_ERROR);// mapea mensaje de error
 		}	
 		response.put("mensaje", "El cliente se ah eliminado con exito de la base de datos");
-		return new ResponseEntity<Map<String, Object>>(response, HttpStatus.CREATED);// mapea mensaje y objeto
-			
+		return new ResponseEntity<Map<String, Object>>(response, HttpStatus.CREATED);// mapea mensaje y objeto	
 	}
 }
