@@ -34,7 +34,7 @@ private String nombre;
 private String apellido;
 @NotEmpty(message = " este campo no puede estar vacio!")
 @Email(message = " debe escribir un direccion de email correcta")
-@Column(nullable = false, unique = true)
+@Column(nullable = false, unique = false)
 private String email;
 @Column(name = "create_at")
 @Temporal(TemporalType.DATE)
