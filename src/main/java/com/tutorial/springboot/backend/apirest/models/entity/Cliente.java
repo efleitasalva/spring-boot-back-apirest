@@ -13,6 +13,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.CreationTimestamp;
@@ -36,9 +37,9 @@ private String apellido;
 @Email(message = " debe escribir un direccion de email correcta")
 @Column(nullable = false, unique = false)
 private String email;
+@NotNull (message = " este campo no puede estar vacio!")
 @Column(name = "create_at")
 @Temporal(TemporalType.DATE)
-@CreationTimestamp
 private Date createAt;
 
 public Long getId() {
