@@ -30,13 +30,16 @@ private Long id;
 @NotEmpty(message = " este campo no puede estar vacio!")
 @Size(min=4, max=12, message=" este campo debe tener entre 4 a 12 caracteres")
 private String nombre;
+
 @NotEmpty(message = " este campo no puede estar vacio!")
 @Size(min=4, max=12, message=" este campo debe tener entre 4 a 12 caracteres")
 private String apellido;
+
 @NotEmpty(message = " este campo no puede estar vacio!")
 @Email(message = " debe escribir un direccion de email correcta")
 @Column(nullable = false, unique = false)
 private String email;
+
 @NotNull (message = " este campo no puede estar vacio!")
 @Column(name = "create_at")
 @Temporal(TemporalType.DATE)
